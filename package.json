@@ -12,8 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
-
+    "clean": "gatsby clean",
+    "deploy:github": "npm run build && node ./scripts/deploy-github"
   },
   "dependencies": {
     "aos": "^2.3.4",
