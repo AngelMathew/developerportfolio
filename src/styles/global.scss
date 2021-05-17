@@ -1,0 +1,97 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+@font-face {
+  font-family: 'MarkPro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('MarkPro'), url('../fonts/MARKPRO.woff') format('woff');
+  }
+
+html {
+  font-family:'MarkPro';
+  font-size: $max_font;
+  color: $font__color;
+  box-sizing: border-box;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  // overflow-x: hidden  !important;
+  scroll-behavior: smooth;
+ 
+}
+body {margin: 0; 
+  height: 100%;
+  // overflow-y: scroll;
+  overflow-x: hidden; 
+  background-color: $background__color;
+  // font-size: calc(0.75em + 1vmin);
+}
+h1{
+  color:$font__color__two;
+  font-size: 3em;
+  text-shadow: 2px 4px 20px $font__color__one;
+}
+h2{
+  color: $font__color__one;		
+  font-size: 2.5em;	
+  margin: .5em 0;
+}
+
+h4{
+  color: $font__color__one;	
+  font-size: 1.5em;
+}
+h3{
+  color: $font__color__two;
+  margin:.5em 0;
+  font-size: 1.5em;
+}
+h6{
+  font-size: $min-font;
+}
+p{
+  color: $font__color__two;	
+  font-size: 1.25em;	
+  letter-spacing: 0px;	
+  line-height: 136%;
+}
+
+span{
+  font-size: 1.1em;
+  color: $font__color__two;	
+// margin:.5em 0;
+display: block;
+}
+// br{
+//   margin:2em 0;
+// }
+li{
+  color: $font__color__two;	
+}
+
+
+main{
+  overflow-x: hidden  !important; 
+  height: 100%;
+}
+button{
+  font-family: "MarkPro";
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: $font__color__two;
+  cursor: pointer;
+}
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  &:before {
+    box-sizing: inherit;
+  }
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
